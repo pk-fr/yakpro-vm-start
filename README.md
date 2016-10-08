@@ -30,8 +30,8 @@ Usually "C:\Program Files\Oracle\VirtualBox"
 yakpro-vm-start "The Virtual Machine Name"
 
 A convenient way is to create on your Desktop a shortcut to yakpro-vm-start.exe  
-Set the start location to  "C:\Program Files\Oracle\VirtualBox" or whatever you installed VirtualBox.
-and set your VM Name (surrounded by " if it contains sapces) as an argument after yakpro-vm-start.exe
+Set the start location to  "C:\Program Files\Oracle\VirtualBox" or wherever you installed VirtualBox.  
+and set your VM Name (surrounded by double-quotes if it contains spaces) as an argument after yakpro-vm-start.exe  
 
 
 ### How the job is done? ###
