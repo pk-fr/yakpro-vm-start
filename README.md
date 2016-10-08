@@ -11,7 +11,7 @@ Then the virtual machine is automatically launched!
 
 This source code is for Windows Hosts, but can be easyly ported for Linux Hosts.
 
-I have generated the program using Visual Studio Community 2015
+I have generated the program using Visual Studio Community 2015  
 Specific options I have used:
  - no precompiled headers.
  - /D_CRT_SECURE_NO_WARNINGS 
