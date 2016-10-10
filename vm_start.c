@@ -27,7 +27,7 @@ int main(int argc, char *argv[])
         {
             for (i = 0; buffer[i] && buffer[i] != '-'; ++i); ++i;   // skip to first char after '-'
             for (j = 0; buffer[i] && buffer[i] != '\n';) result[j++] = buffer[i++]; result[j] = '\0';
-            strcpy(t_nic[nb_nic++], result);
+            strcpy(t_nic[nb_nic], result);
         }
     }
     // then let's select the first wired interface found if anyt
@@ -38,11 +38,11 @@ int main(int argc, char *argv[])
         {
             for (i=0 ; i<nb_nic-1 ; ++i)  // We keep the last interface name if all previous are skipped!
             {                               // So we keep the wireless interface if no wired interface found...
-                strcpy(buffer, t_nic[0]); l = strlen(buffer);
+                strcpy(buffer, t_nic[i]); l = strlen(buffer);
                 for (skip=j=0 ; j<l ; ++j)
                 {
-                    if (!strncmp(buffer, "Wireless", strlen("Wireless"))) { skip = 1; break; }
-                    if (!strncmp(buffer, "Wifi"    , strlen("Wifi"    ))) { skip = 1; break; }
+                    if (!strncmp(buffer+j, "Wireless", strlen("Wireless"))) { skip = 1; break; }
+                    if (!strncmp(buffer+j, "Wifi"    , strlen("Wifi"    ))) { skip = 1; break; }
                 }
                 if (skip) continue;     // if wireless interface is found, then skip it!
                 break;                  // we stop on the 1st non wireless interface found!
